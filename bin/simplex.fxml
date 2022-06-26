@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="563.0" prefWidth="754.0" style="-fx-background-color: #E4EECD;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLDocumentController">
+   <children>
+      <ImageView fitHeight="168.0" fitWidth="123.0" layoutX="611.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@simplex.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@est.png" />
+         </image>
+      </ImageView>
+      <TextField id="X_value" fx:id="X_value" layoutX="344.0" layoutY="221.0" prefHeight="25.0" prefWidth="69.0" promptText="X valuer" />
+      <TextField id="Y_value" fx:id="Y_value" layoutX="475.0" layoutY="221.0" prefHeight="25.0" prefWidth="69.0" promptText="Y valeur" />
+      <Label layoutX="26.0" layoutY="481.0" prefHeight="32.0" prefWidth="132.0" text="SOLUTION : " textFill="#230099">
+         <font>
+            <Font name="Consolas Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="308.0" layoutY="223.0" text="X *">
+         <font>
+            <Font name="Georgia Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="420.0" layoutY="219.0" text="+">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="450.0" layoutY="224.0" text="Y *">
+         <font>
+            <Font name="Georgia Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField id="X1" fx:id="X1" layoutX="202.0" layoutY="303.0" prefHeight="25.0" prefWidth="69.0" promptText="X1" />
+      <TextField id="Y1" fx:id="Y1" layoutX="333.0" layoutY="303.0" prefHeight="25.0" prefWidth="69.0" promptText="Y1" />
+      <Label layoutX="166.0" layoutY="306.0" text="X *">
+         <font>
+            <Font name="Georgia Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="278.0" layoutY="301.0" text="+">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="308.0" layoutY="306.0" text="Y *">
+         <font>
+            <Font name="Georgia Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField id="X2" fx:id="X2" layoutX="202.0" layoutY="348.0" prefHeight="25.0" prefWidth="69.0" promptText="X2" />
+      <TextField id="Y2" fx:id="Y2" layoutX="333.0" layoutY="348.0" prefHeight="25.0" prefWidth="69.0" promptText="Y2" />
+      <Label layoutX="166.0" layoutY="350.0" text="X *">
+         <font>
+            <Font name="Georgia Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="278.0" layoutY="346.0" text="+">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="308.0" layoutY="351.0" text="Y *">
+         <font>
+            <Font name="Georgia Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField id="value1" fx:id="value1" layoutX="494.0" layoutY="304.0" prefHeight="25.0" prefWidth="69.0" promptText="Valeur1" />
+      <TextField id="value2" fx:id="value2" layoutX="494.0" layoutY="348.0" prefHeight="25.0" prefWidth="69.0" promptText="Valeur2" />
+      <Button layoutX="324.0" layoutY="403.0" mnemonicParsing="false" onAction="#Calculer" prefHeight="25.0" prefWidth="106.0" style="-fx-background-color: white; -fx-background-insets: while;" text="Calculer" textFill="#0400ff">
+         <font>
+            <Font name="Consolas Bold" size="16.0" />
+         </font>
+      </Button>
+      <Label layoutX="335.0" layoutY="486.0" prefHeight="21.0" prefWidth="39.0" text="X  =">
+         <font>
+            <Font name="Georgia Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="460.0" layoutY="487.0" text="Y  =">
+         <font>
+            <Font name="Georgia Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label id="X_result" fx:id="X_label" layoutX="387.0" layoutY="485.0" prefHeight="26.0" prefWidth="57.0" text="0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label id="Y_result" fx:id="Y_label" layoutX="506.0" layoutY="485.0" prefHeight="26.0" prefWidth="50.0" text="0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="MaxOrMin" layoutX="117.0" layoutY="222.0" onAction="#MAXOrMIN_function" prefHeight="25.0" prefWidth="98.0" promptText="MAX/MIN" style="-fx-background-color: white;" />
+      <ComboBox fx:id="InfORSup_equ1" layoutX="414.0" layoutY="303.0" onAction="#INForSUP_function" prefHeight="25.0" prefWidth="69.0" promptText="&gt;/&lt;" style="-fx-background-color: white;" />
+      <ComboBox fx:id="InfORSup_equ2" layoutX="414.0" layoutY="348.0" onAction="#INForSUP_function" prefHeight="25.0" prefWidth="69.0" promptText="&gt;/&lt;" style="-fx-background-color: white;" />
+      <Label layoutX="253.0" layoutY="223.0" prefHeight="21.0" prefWidth="39.0" text="Z  =">
+         <font>
+            <Font name="Georgia Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="199.0" layoutY="486.0" prefHeight="21.0" prefWidth="39.0" text="Z  =">
+         <font>
+            <Font name="Georgia Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label id="Y_result" fx:id="Z_label" layoutX="249.0" layoutY="484.0" prefHeight="26.0" prefWidth="57.0" text="0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="299.0" layoutY="128.0" prefHeight="45.0" prefWidth="160.0" text="Equation:" textFill="#0b8600">
+         <font>
+            <Font name="Consolas Bold" size="28.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
